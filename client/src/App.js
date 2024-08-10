@@ -4,6 +4,7 @@ import ScrollToTop from "./ScrollToTop";
 import Navbar from "./essentials/Navbar";
 import Footer from "./essentials/Footer";
 import LandingPage from "./components/LandingPage";
+import Dashboard from "./components/dashboard";
 
 function AppContent() {
   const location = useLocation();
@@ -17,6 +18,7 @@ function AppContent() {
         <Route exact path="/auth/signin" element={<Auth />} />
         <Route exact path="/auth/signup" element={<Auth />} />
         <Route exact path="/" element={<LandingPage />} />
+        <Route exact path="/dashboard" element={<Dashboard />} />
       </Routes>
       {!isAuthPath && <Footer />}
     </>

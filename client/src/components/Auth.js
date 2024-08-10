@@ -1,11 +1,11 @@
 import React from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import auth_image from "../images/auth_image.jpg";
 import logo from "../images/logo.svg";
 
 export default function Auth() {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const variants = {
     initial: (direction) => ({
@@ -37,7 +37,7 @@ export default function Auth() {
             custom={direction}
             transition={{ duration: 0.5 }}
           >
-            <SignUp />
+            <SignUp navigate={navigate} />
           </motion.div>
         ) : location.pathname === "/auth/signin" ? (
           <motion.div
@@ -49,7 +49,7 @@ export default function Auth() {
             custom={direction}
             transition={{ duration: 0.5 }}
           >
-            <SignIn />
+            <SignIn navigate={navigate} />
           </motion.div>
         ) : null}
       </AnimatePresence>
@@ -57,7 +57,11 @@ export default function Auth() {
   );
 }
 
-const SignIn = () => {
+const SignIn = ({ navigate }) => {
+  const handleSignIn = () => {
+    // Perform sign-in logic here (e.g., validation)
+    navigate("/dashboard");
+  };
 
   return (
     <div className="row">
@@ -93,7 +97,9 @@ const SignIn = () => {
             Forgot Password?
           </div>
           <div className="text-center mt-4">
-            <button className="btn btn-warning">Sign In</button>
+            <button className="btn btn-warning" onClick={handleSignIn}>
+              Sign In
+            </button>
             <p className="mt-3">
               Don't have an account?{" "}
               <Link to="/auth/signup">
@@ -107,7 +113,12 @@ const SignIn = () => {
   );
 };
 
-const SignUp = () => {
+const SignUp = ({ navigate }) => {
+  const handleSignUp = () => {
+    // Perform sign-up logic here (e.g., validation)
+    navigate("/dashboard");
+  };
+
   return (
     <div className="row">
       <div className="col-md-6">
@@ -147,7 +158,9 @@ const SignUp = () => {
             <input type="password" placeholder="" className="form-control" />
           </div>
           <div className="text-center mt-4">
-            <button className="btn btn-warning">Sign Up</button>
+            <button className="btn btn-warning" onClick={handleSignUp}>
+              Sign Up
+            </button>
             <p className="mt-3">
               Already have an account?{" "}
               <Link to="/auth/signin">

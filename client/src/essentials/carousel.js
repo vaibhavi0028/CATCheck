@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/effect-coverflow';
 
 const images = [
-  img1, // Add the imported image to the array
+  img1, 
   img1,
   img1,
   img1,
