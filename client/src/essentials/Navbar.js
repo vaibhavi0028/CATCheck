@@ -9,7 +9,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav class="navbar bg-body-tertiary sticky-top">
+    <nav class="navbar bg-black sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">
           <img
@@ -20,7 +20,7 @@ const Navbar = () => {
             class="d-inline-block align-text-top"
           />
         </a>
-        <span class="navbar-text"><button type="button" class="btn btn-warning">Sign In</button></span>
+        <button type="button" class="btn-cat-yellow">Sign In</button>
       </div>
     </nav>
   );

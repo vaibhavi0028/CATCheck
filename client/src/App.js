@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Auth from "./components/Auth";
 import ScrollToTop from "./ScrollToTop";
 import Navbar from "./essentials/Navbar";
+import Footer from "./essentials/Footer";
 import LandingPage from "./components/LandingPage";
 
 function AppContent() {
@@ -17,6 +18,7 @@ function AppContent() {
         <Route exact path="/auth/signup" element={<Auth />} />
         <Route exact path="/" element={<LandingPage />} />
       </Routes>
+      {!isAuthPath && <Footer />}
     </>
   );
 }

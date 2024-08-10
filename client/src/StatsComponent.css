@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Averta+Std:wght@400;700&display=swap');
+
+.stats-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 4rem 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heading {
+  font-family: 'Averta Std', sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: black;
+  margin-bottom: 3rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.highlight {
+  color: #ffcc01;
+}
+
+.stats-items-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: fit-content;
+}
+
+.stat-item {
+  flex: 1;
+  min-width: 200px;
+  margin: 0.5rem;
+}
+
+.stat-number {
+  font-family: 'Averta Std', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.stat-description {
+  font-family: 'Averta Std', sans-serif;
+  font-size: 1rem;
+  color: #666;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.divider {
+  width: 1px;
+  height: 80px;
+  background-color: #ddd;
+  margin: 0 2rem;
+}
+
+.stats-container {
+  will-change: opacity, transform;
+}
+
+.stat-item, .divider {
+  will-change: opacity, transform;
+} 
+@media (max-width: 768px) {
+  .heading {
+    font-size: 1rem;
+    line-height: normal;
+  }
+
+  .stats-items-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-item {
+    margin: 2rem 0;
+  }
+
+  .divider {
+    width: 80px;
+    height: 1px;
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .stat-number {
+    font-size: 2.5rem;
+  }
+}
