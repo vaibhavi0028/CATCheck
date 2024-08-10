@@ -21,7 +21,7 @@ const Carousel = () => {
     <div className="carousel-container">
       <Swiper
         modules={[Navigation, Pagination, EffectCoverflow]}
-        spaceBetween={30}
+        spaceBetween={20}
         centeredSlides={true}
         slidesPerView={'auto'}
         effect="coverflow"
