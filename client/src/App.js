@@ -6,14 +6,16 @@ import LandingPage from "./components/LandingPage";
 
 function AppContent() {
   const location = useLocation();
+  const isAuthPath = location.pathname.includes("/auth");
 
   return (
     <>
       <ScrollToTop />
+      {!isAuthPath && <Navbar />}
       <Routes>
         <Route exact path="/auth/signin" element={<Auth />} />
         <Route exact path="/auth/signup" element={<Auth />} />
-        <Route exact path="/" element={<Navbar LandingPage />} />
+        <Route exact path="/" element={<LandingPage />} />
       </Routes>
     </>
   );

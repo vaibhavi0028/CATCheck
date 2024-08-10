@@ -52,6 +52,10 @@ input {
   padding: 5px;
   border-radius: 6px;
 }
+
+.form-control{
+  border: 1px solid rgb(120, 120, 120);
+}
 .btn-cat {
   width: 50%;
   border-radius: 50px;
@@ -129,4 +133,8 @@ input {
 
 .swiper-pagination-bullet-active {
   background: #ffcc01;
+}
+
+.loading-animation{
+  width:100%;
 }

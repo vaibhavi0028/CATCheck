@@ -58,6 +58,7 @@ export default function Auth() {
 }
 
 const SignIn = () => {
+
   return (
     <div className="row">
       <div className="col-md-6">
@@ -86,7 +87,7 @@ const SignIn = () => {
           </div>
           <div className="mt-3 input-control">
             <label>Email Address</label>
-            <input type="email" placeholder="" />
+            <input type="email" placeholder="" className="form-control" />
           </div>
           <div className="d-flex justify-content-end mt-2">
             Forgot Password?

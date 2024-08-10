@@ -4,8 +4,7 @@ import { Navigation, Pagination, EffectCoverflow } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/effect-coverflow'; // Import for EffectCoverflow
-import '../carousel.css'; // Your custom styles
+import 'swiper/css/effect-coverflow'; 
 
 const images = [
   "https://swiperjs.com/demos/images/nature-5.jpg",
